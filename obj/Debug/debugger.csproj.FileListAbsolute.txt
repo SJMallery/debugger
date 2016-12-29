@@ -1,0 +1,12 @@
+c:\users\samjm\documents\visual studio 2015\Projects\debugger\debugger\bin\Debug\debugger.exe.config
+c:\users\samjm\documents\visual studio 2015\Projects\debugger\debugger\bin\Debug\debugger.exe
+c:\users\samjm\documents\visual studio 2015\Projects\debugger\debugger\bin\Debug\debugger.pdb
+c:\users\samjm\documents\visual studio 2015\Projects\debugger\debugger\bin\Debug\System.Data.SqlServerCe.dll
+c:\users\samjm\documents\visual studio 2015\Projects\debugger\debugger\obj\Debug\debugger.csprojResolveAssemblyReference.cache
+c:\users\samjm\documents\visual studio 2015\Projects\debugger\debugger\obj\Debug\debugger.Properties.Resources.resources
+c:\users\samjm\documents\visual studio 2015\Projects\debugger\debugger\obj\Debug\debugger.csproj.GenerateResource.Cache
+c:\users\samjm\documents\visual studio 2015\Projects\debugger\debugger\obj\Debug\debugger.exe
+c:\users\samjm\documents\visual studio 2015\Projects\debugger\debugger\obj\Debug\debugger.pdb
+C:\Users\samjm\Documents\Visual Studio 2015\Projects\debugger\debugger\obj\Debug\debugger.Form1.resources
+C:\Users\samjm\Documents\Visual Studio 2015\Projects\debugger\debugger\obj\Debug\debugger.Form2.resources
+C:\Users\samjm\Documents\Visual Studio 2015\Projects\debugger\debugger\obj\Debug\debugger.Form3.resources
