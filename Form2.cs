@@ -22,6 +22,8 @@ namespace debugger
         {
             loginMessage.Hide();
             logError.Hide();
+            solveBug.Hide();
+            repBug.Hide();
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -56,6 +58,9 @@ namespace debugger
                     
                     loginMessage.Show();
                     loginMessage.Text = "Welcome " + dr["name"].ToString() + ".";
+                    solveBug.Show();
+                    repBug.Show();
+
                 }
             }
             else
@@ -67,6 +72,15 @@ namespace debugger
 
         private void logError_Click(object sender, EventArgs e)
         {
+
+        }
+
+        private void repBug_Click(object sender, EventArgs e)
+        {
+            Form1 frm1 = new Form1();
+            frm1.Show();
+            this.Hide();
+
 
         }
     }

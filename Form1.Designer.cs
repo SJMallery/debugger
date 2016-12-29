@@ -28,23 +28,24 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
+            this.nameInsertBox = new System.Windows.Forms.RichTextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.richTextBox2 = new System.Windows.Forms.RichTextBox();
+            this.codeInsertBox = new System.Windows.Forms.RichTextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.richTextBox3 = new System.Windows.Forms.RichTextBox();
+            this.langInsertBox = new System.Windows.Forms.RichTextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.richTextBox4 = new System.Windows.Forms.RichTextBox();
+            this.descInsertBox = new System.Windows.Forms.RichTextBox();
             this.label4 = new System.Windows.Forms.Label();
+            this.uploadButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // richTextBox1
+            // nameInsertBox
             // 
-            this.richTextBox1.Location = new System.Drawing.Point(93, 43);
-            this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(181, 35);
-            this.richTextBox1.TabIndex = 0;
-            this.richTextBox1.Text = "";
+            this.nameInsertBox.Location = new System.Drawing.Point(93, 43);
+            this.nameInsertBox.Name = "nameInsertBox";
+            this.nameInsertBox.Size = new System.Drawing.Size(181, 35);
+            this.nameInsertBox.TabIndex = 0;
+            this.nameInsertBox.Text = "";
             // 
             // label1
             // 
@@ -56,31 +57,31 @@
             this.label1.TabIndex = 1;
             this.label1.Text = "Name";
             // 
-            // richTextBox2
+            // codeInsertBox
             // 
-            this.richTextBox2.Location = new System.Drawing.Point(171, 263);
-            this.richTextBox2.Name = "richTextBox2";
-            this.richTextBox2.Size = new System.Drawing.Size(372, 150);
-            this.richTextBox2.TabIndex = 2;
-            this.richTextBox2.Text = "";
+            this.codeInsertBox.Location = new System.Drawing.Point(172, 190);
+            this.codeInsertBox.Name = "codeInsertBox";
+            this.codeInsertBox.Size = new System.Drawing.Size(372, 150);
+            this.codeInsertBox.TabIndex = 2;
+            this.codeInsertBox.Text = "";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(124, 331);
+            this.label2.Location = new System.Drawing.Point(125, 258);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(41, 16);
             this.label2.TabIndex = 3;
             this.label2.Text = "Code";
             // 
-            // richTextBox3
+            // langInsertBox
             // 
-            this.richTextBox3.Location = new System.Drawing.Point(442, 43);
-            this.richTextBox3.Name = "richTextBox3";
-            this.richTextBox3.Size = new System.Drawing.Size(181, 35);
-            this.richTextBox3.TabIndex = 4;
-            this.richTextBox3.Text = "";
+            this.langInsertBox.Location = new System.Drawing.Point(442, 43);
+            this.langInsertBox.Name = "langInsertBox";
+            this.langInsertBox.Size = new System.Drawing.Size(181, 35);
+            this.langInsertBox.TabIndex = 4;
+            this.langInsertBox.Text = "";
             // 
             // label3
             // 
@@ -92,38 +93,49 @@
             this.label3.TabIndex = 5;
             this.label3.Text = "Language";
             // 
-            // richTextBox4
+            // descInsertBox
             // 
-            this.richTextBox4.Location = new System.Drawing.Point(171, 198);
-            this.richTextBox4.Name = "richTextBox4";
-            this.richTextBox4.Size = new System.Drawing.Size(372, 43);
-            this.richTextBox4.TabIndex = 6;
-            this.richTextBox4.Text = "";
+            this.descInsertBox.Location = new System.Drawing.Point(172, 125);
+            this.descInsertBox.Name = "descInsertBox";
+            this.descInsertBox.Size = new System.Drawing.Size(372, 43);
+            this.descInsertBox.TabIndex = 6;
+            this.descInsertBox.Text = "";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(89, 213);
+            this.label4.Location = new System.Drawing.Point(90, 140);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(76, 16);
             this.label4.TabIndex = 7;
             this.label4.Text = "Description";
+            // 
+            // uploadButton
+            // 
+            this.uploadButton.Location = new System.Drawing.Point(303, 364);
+            this.uploadButton.Name = "uploadButton";
+            this.uploadButton.Size = new System.Drawing.Size(102, 41);
+            this.uploadButton.TabIndex = 10;
+            this.uploadButton.Text = "Upload";
+            this.uploadButton.UseVisualStyleBackColor = true;
+            this.uploadButton.Click += new System.EventHandler(this.uploadButton_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.ClientSize = new System.Drawing.Size(684, 461);
+            this.ClientSize = new System.Drawing.Size(684, 425);
+            this.Controls.Add(this.uploadButton);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.richTextBox4);
+            this.Controls.Add(this.descInsertBox);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.richTextBox3);
+            this.Controls.Add(this.langInsertBox);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.richTextBox2);
+            this.Controls.Add(this.codeInsertBox);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.richTextBox1);
+            this.Controls.Add(this.nameInsertBox);
             this.Name = "Form1";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
@@ -134,14 +146,15 @@
 
         #endregion
 
-        private System.Windows.Forms.RichTextBox richTextBox1;
+        private System.Windows.Forms.RichTextBox nameInsertBox;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.RichTextBox richTextBox2;
+        private System.Windows.Forms.RichTextBox codeInsertBox;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.RichTextBox richTextBox3;
+        private System.Windows.Forms.RichTextBox langInsertBox;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.RichTextBox richTextBox4;
+        private System.Windows.Forms.RichTextBox descInsertBox;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Button uploadButton;
     }
 }
 

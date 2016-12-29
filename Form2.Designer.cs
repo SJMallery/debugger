@@ -37,6 +37,8 @@
             this.button2 = new System.Windows.Forms.Button();
             this.loginMessage = new System.Windows.Forms.Label();
             this.logError = new System.Windows.Forms.Label();
+            this.repBug = new System.Windows.Forms.Button();
+            this.solveBug = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // usernameText
@@ -128,11 +130,32 @@
             this.logError.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.logError.Click += new System.EventHandler(this.logError_Click);
             // 
+            // repBug
+            // 
+            this.repBug.Location = new System.Drawing.Point(90, 153);
+            this.repBug.Name = "repBug";
+            this.repBug.Size = new System.Drawing.Size(75, 23);
+            this.repBug.TabIndex = 10;
+            this.repBug.Text = "Report Bug";
+            this.repBug.UseVisualStyleBackColor = true;
+            this.repBug.Click += new System.EventHandler(this.repBug_Click);
+            // 
+            // solveBug
+            // 
+            this.solveBug.Location = new System.Drawing.Point(237, 153);
+            this.solveBug.Name = "solveBug";
+            this.solveBug.Size = new System.Drawing.Size(75, 23);
+            this.solveBug.TabIndex = 11;
+            this.solveBug.Text = "Solve Bug";
+            this.solveBug.UseVisualStyleBackColor = true;
+            // 
             // Form2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(384, 261);
+            this.Controls.Add(this.solveBug);
+            this.Controls.Add(this.repBug);
             this.Controls.Add(this.logError);
             this.Controls.Add(this.loginMessage);
             this.Controls.Add(this.button2);
@@ -161,5 +184,7 @@
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Label loginMessage;
         private System.Windows.Forms.Label logError;
+        private System.Windows.Forms.Button repBug;
+        private System.Windows.Forms.Button solveBug;
     }
 }

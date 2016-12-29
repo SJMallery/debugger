@@ -6,39 +6,26 @@ namespace debugger
 {
     public partial class Form1 : Form
     {
-        SqlConnection mySqlConnection;
 
         public Form1()
         {
             InitializeComponent();
-
-            mySqlConnection =
-            new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\samjm\Documents\testDB.mdf;Integrated Security=True;Connect Timeout=30");
-
-            String selcmd = "SELECT name FROM myTable";
-
-            SqlCommand mySqlCommand = new SqlCommand(selcmd, mySqlConnection);
-
-
-            mySqlConnection.Open();
-
-
-            SqlDataReader mySqlDataReader = mySqlCommand.ExecuteReader();
-
-
-            while (mySqlDataReader.Read())
-            {
-                Console.WriteLine(mySqlDataReader["name"]);
-
-
-            }
-
-
         }
 
         private void Form1_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void uploadButton_Click(object sender, EventArgs e)
+        {
+
+            SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\samjm\Documents\testDB.mdf;Integrated Security=True;Connect Timeout=30");
+            String str = "insert into bugs(name,language,description,code) values('" + nameInsertBox.Text + "','" + langInsertBox.Text + "','" + descInsertBox.Text + "','" + codeInsertBox + "')";
+            con.Open();
+            SqlCommand cmd = new SqlCommand(str, con);
+            cmd.ExecuteNonQuery();
+            MessageBox.Show("Your bug has been submitted");
         }
     }
 }
