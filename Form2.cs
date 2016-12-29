@@ -22,8 +22,9 @@ namespace debugger
         {
             loginMessage.Hide();
             logError.Hide();
-            solveBug.Hide();
-            repBug.Hide();
+            //solveBug.Hide();
+            //repBug.Hide();
+            enterButton.Hide();
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -35,6 +36,9 @@ namespace debugger
 
         private void button1_Click(object sender, EventArgs e)
         {
+
+           
+
             SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\samjm\Documents\testDB.mdf;Integrated Security=True;Connect Timeout=30");
             con.Open();
             String str1 = "select name,username,password from users where username='" + usernameText.Text + "' and password='" + passwordText.Text + "'";
@@ -58,8 +62,9 @@ namespace debugger
                     
                     loginMessage.Show();
                     loginMessage.Text = "Welcome " + dr["name"].ToString() + ".";
-                    solveBug.Show();
-                    repBug.Show();
+                    enterButton.Show();
+                    //solveBug.Show();
+                    //repBug.Show();
 
                 }
             }
@@ -75,13 +80,11 @@ namespace debugger
 
         }
 
-        private void repBug_Click(object sender, EventArgs e)
+        private void enterButton_Click(object sender, EventArgs e)
         {
-            Form1 frm1 = new Form1();
-            frm1.Show();
+            Form5 frm5 = new Form5();
+            frm5.Show();
             this.Hide();
-
-
         }
     }
 }

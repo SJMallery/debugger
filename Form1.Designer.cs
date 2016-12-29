@@ -37,6 +37,8 @@
             this.descInsertBox = new System.Windows.Forms.RichTextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.uploadButton = new System.Windows.Forms.Button();
+            this.solvedInsertBox = new System.Windows.Forms.RichTextBox();
+            this.label5 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // nameInsertBox
@@ -59,7 +61,7 @@
             // 
             // codeInsertBox
             // 
-            this.codeInsertBox.Location = new System.Drawing.Point(172, 190);
+            this.codeInsertBox.Location = new System.Drawing.Point(182, 184);
             this.codeInsertBox.Name = "codeInsertBox";
             this.codeInsertBox.Size = new System.Drawing.Size(372, 150);
             this.codeInsertBox.TabIndex = 2;
@@ -69,7 +71,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(125, 258);
+            this.label2.Location = new System.Drawing.Point(135, 252);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(41, 16);
             this.label2.TabIndex = 3;
@@ -95,7 +97,7 @@
             // 
             // descInsertBox
             // 
-            this.descInsertBox.Location = new System.Drawing.Point(172, 125);
+            this.descInsertBox.Location = new System.Drawing.Point(182, 119);
             this.descInsertBox.Name = "descInsertBox";
             this.descInsertBox.Size = new System.Drawing.Size(372, 43);
             this.descInsertBox.TabIndex = 6;
@@ -105,7 +107,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(90, 140);
+            this.label4.Location = new System.Drawing.Point(100, 134);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(76, 16);
             this.label4.TabIndex = 7;
@@ -113,7 +115,7 @@
             // 
             // uploadButton
             // 
-            this.uploadButton.Location = new System.Drawing.Point(303, 364);
+            this.uploadButton.Location = new System.Drawing.Point(309, 430);
             this.uploadButton.Name = "uploadButton";
             this.uploadButton.Size = new System.Drawing.Size(102, 41);
             this.uploadButton.TabIndex = 10;
@@ -121,12 +123,31 @@
             this.uploadButton.UseVisualStyleBackColor = true;
             this.uploadButton.Click += new System.EventHandler(this.uploadButton_Click);
             // 
+            // solvedInsertBox
+            // 
+            this.solvedInsertBox.Location = new System.Drawing.Point(370, 358);
+            this.solvedInsertBox.Name = "solvedInsertBox";
+            this.solvedInsertBox.Size = new System.Drawing.Size(101, 41);
+            this.solvedInsertBox.TabIndex = 11;
+            this.solvedInsertBox.Text = "";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(284, 372);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(80, 13);
+            this.label5.TabIndex = 12;
+            this.label5.Text = "Solved Yes/No";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.ClientSize = new System.Drawing.Size(684, 425);
+            this.ClientSize = new System.Drawing.Size(684, 502);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.solvedInsertBox);
             this.Controls.Add(this.uploadButton);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.descInsertBox);
@@ -155,6 +176,8 @@
         private System.Windows.Forms.RichTextBox descInsertBox;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button uploadButton;
+        private System.Windows.Forms.RichTextBox solvedInsertBox;
+        private System.Windows.Forms.Label label5;
     }
 }
 

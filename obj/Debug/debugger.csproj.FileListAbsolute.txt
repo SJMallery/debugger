@@ -10,3 +10,6 @@ c:\users\samjm\documents\visual studio 2015\Projects\debugger\debugger\obj\Debug
 C:\Users\samjm\Documents\Visual Studio 2015\Projects\debugger\debugger\obj\Debug\debugger.Form1.resources
 C:\Users\samjm\Documents\Visual Studio 2015\Projects\debugger\debugger\obj\Debug\debugger.Form2.resources
 C:\Users\samjm\Documents\Visual Studio 2015\Projects\debugger\debugger\obj\Debug\debugger.Form3.resources
+C:\Users\samjm\Documents\Visual Studio 2015\Projects\debugger\debugger\obj\Debug\debugger.Form4.resources
+C:\Users\samjm\Documents\Visual Studio 2015\Projects\debugger\debugger\obj\Debug\debugger.Form5.resources
+C:\Users\samjm\Documents\Visual Studio 2015\Projects\debugger\debugger\obj\Debug\debugger.Form6.resources

@@ -21,11 +21,13 @@ namespace debugger
         {
 
             SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\samjm\Documents\testDB.mdf;Integrated Security=True;Connect Timeout=30");
-            String str = "insert into bugs(name,language,description,code) values('" + nameInsertBox.Text + "','" + langInsertBox.Text + "','" + descInsertBox.Text + "','" + codeInsertBox + "')";
+            String str = "insert into bugs(name,language,description,code,solved) values('" + nameInsertBox.Text + "','" + langInsertBox.Text + "','" + descInsertBox.Text + "','" + codeInsertBox + "', '" + solvedInsertBox + "')";
             con.Open();
             SqlCommand cmd = new SqlCommand(str, con);
             cmd.ExecuteNonQuery();
             MessageBox.Show("Your bug has been submitted");
+
+
         }
     }
 }
