@@ -26,20 +26,17 @@ namespace debugger
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-
-           
-
-            foreach (DataGridViewRow row in dataGridView1.SelectedRows)
+            if (e.RowIndex >= 0)
             {
-                String value1 = row.Cells[0].Value.ToString();
-                string value2 = row.Cells[1].Value.ToString();
-                string value3 = row.Cells[2].Value.ToString();
-                string value4 = row.Cells[3].Value.ToString();
-                string value5 = row.Cells[4].Value.ToString();
-                string value6 = row.Cells[5].Value.ToString();
-            }
+                DataGridViewRow row = this.dataGridView1.Rows[e.RowIndex];
 
-            value1 = nameUpdateBox.Text;
+                nameUpdateBox.Text = row.Cells["name"].Value.ToString();
+                langUpdateBox.Text = row.Cells["language"].Value.ToString();
+                idUpdateBox.Text = row.Cells["Id"].Value.ToString();
+                descUpdateBox.Text = row.Cells["description"].Value.ToString();
+                codeUpdateBox.Text = row.Cells["code"].Value.ToString();
+                solvedUpdateBox.Text = row.Cells["solved"].Value.ToString();
+            }    
 
         }
     }

@@ -30,15 +30,15 @@
         {
             this.components = new System.ComponentModel.Container();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.testDBDataSet = new debugger.testDBDataSet();
-            this.bugsBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.bugsTableAdapter = new debugger.testDBDataSetTableAdapters.bugsTableAdapter();
             this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.languageDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.descriptionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.codeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.solvedDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.bugsBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.testDBDataSet = new debugger.testDBDataSet();
+            this.bugsTableAdapter = new debugger.testDBDataSetTableAdapters.bugsTableAdapter();
             this.updateButton = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
             this.solvedUpdateBox = new System.Windows.Forms.RichTextBox();
@@ -50,9 +50,11 @@
             this.codeUpdateBox = new System.Windows.Forms.RichTextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.nameUpdateBox = new System.Windows.Forms.RichTextBox();
+            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
+            this.idUpdateBox = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.testDBDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bugsBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.testDBDataSet)).BeginInit();
             this.SuspendLayout();
             // 
             // dataGridView1
@@ -72,20 +74,6 @@
             this.dataGridView1.Size = new System.Drawing.Size(647, 174);
             this.dataGridView1.TabIndex = 0;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
-            // 
-            // testDBDataSet
-            // 
-            this.testDBDataSet.DataSetName = "testDBDataSet";
-            this.testDBDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // bugsBindingSource
-            // 
-            this.bugsBindingSource.DataMember = "bugs";
-            this.bugsBindingSource.DataSource = this.testDBDataSet;
-            // 
-            // bugsTableAdapter
-            // 
-            this.bugsTableAdapter.ClearBeforeFill = true;
             // 
             // idDataGridViewTextBoxColumn
             // 
@@ -124,6 +112,20 @@
             this.solvedDataGridViewTextBoxColumn.HeaderText = "solved";
             this.solvedDataGridViewTextBoxColumn.Name = "solvedDataGridViewTextBoxColumn";
             // 
+            // bugsBindingSource
+            // 
+            this.bugsBindingSource.DataMember = "bugs";
+            this.bugsBindingSource.DataSource = this.testDBDataSet;
+            // 
+            // testDBDataSet
+            // 
+            this.testDBDataSet.DataSetName = "testDBDataSet";
+            this.testDBDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // bugsTableAdapter
+            // 
+            this.bugsTableAdapter.ClearBeforeFill = true;
+            // 
             // updateButton
             // 
             this.updateButton.Location = new System.Drawing.Point(321, 586);
@@ -154,7 +156,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(107, 315);
+            this.label4.Location = new System.Drawing.Point(104, 337);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(76, 16);
             this.label4.TabIndex = 31;
@@ -162,7 +164,7 @@
             // 
             // descUpdateBox
             // 
-            this.descUpdateBox.Location = new System.Drawing.Point(189, 300);
+            this.descUpdateBox.Location = new System.Drawing.Point(186, 322);
             this.descUpdateBox.Name = "descUpdateBox";
             this.descUpdateBox.Size = new System.Drawing.Size(372, 43);
             this.descUpdateBox.TabIndex = 30;
@@ -190,7 +192,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(142, 433);
+            this.label2.Location = new System.Drawing.Point(139, 448);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(41, 16);
             this.label2.TabIndex = 27;
@@ -198,7 +200,7 @@
             // 
             // codeUpdateBox
             // 
-            this.codeUpdateBox.Location = new System.Drawing.Point(189, 365);
+            this.codeUpdateBox.Location = new System.Drawing.Point(186, 380);
             this.codeUpdateBox.Name = "codeUpdateBox";
             this.codeUpdateBox.Size = new System.Drawing.Size(372, 150);
             this.codeUpdateBox.TabIndex = 26;
@@ -222,11 +224,31 @@
             this.nameUpdateBox.TabIndex = 24;
             this.nameUpdateBox.Text = "";
             // 
+            // richTextBox1
+            // 
+            this.richTextBox1.Location = new System.Drawing.Point(283, 274);
+            this.richTextBox1.Name = "richTextBox1";
+            this.richTextBox1.Size = new System.Drawing.Size(181, 35);
+            this.richTextBox1.TabIndex = 35;
+            this.richTextBox1.Text = "";
+            // 
+            // idUpdateBox
+            // 
+            this.idUpdateBox.AutoSize = true;
+            this.idUpdateBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.idUpdateBox.Location = new System.Drawing.Point(258, 284);
+            this.idUpdateBox.Name = "idUpdateBox";
+            this.idUpdateBox.Size = new System.Drawing.Size(19, 16);
+            this.idUpdateBox.TabIndex = 36;
+            this.idUpdateBox.Text = "Id";
+            // 
             // Form4
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(696, 673);
+            this.Controls.Add(this.idUpdateBox);
+            this.Controls.Add(this.richTextBox1);
             this.Controls.Add(this.updateButton);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.solvedUpdateBox);
@@ -243,8 +265,8 @@
             this.Text = "Form4";
             this.Load += new System.EventHandler(this.Form4_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.testDBDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bugsBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.testDBDataSet)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -273,5 +295,7 @@
         private System.Windows.Forms.RichTextBox codeUpdateBox;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.RichTextBox nameUpdateBox;
+        private System.Windows.Forms.RichTextBox richTextBox1;
+        private System.Windows.Forms.Label idUpdateBox;
     }
 }
