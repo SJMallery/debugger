@@ -30,15 +30,15 @@
         {
             this.nameInsertBox = new System.Windows.Forms.RichTextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.codeInsertBox = new System.Windows.Forms.RichTextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.langInsertBox = new System.Windows.Forms.RichTextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.descInsertBox = new System.Windows.Forms.RichTextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.uploadButton = new System.Windows.Forms.Button();
-            this.solvedInsertBox = new System.Windows.Forms.RichTextBox();
             this.label5 = new System.Windows.Forms.Label();
+            this.codeInsertBox = new System.Windows.Forms.RichTextBox();
+            this.solvedInsertBox = new System.Windows.Forms.RichTextBox();
             this.SuspendLayout();
             // 
             // nameInsertBox
@@ -58,14 +58,6 @@
             this.label1.Size = new System.Drawing.Size(45, 16);
             this.label1.TabIndex = 1;
             this.label1.Text = "Name";
-            // 
-            // codeInsertBox
-            // 
-            this.codeInsertBox.Location = new System.Drawing.Point(182, 184);
-            this.codeInsertBox.Name = "codeInsertBox";
-            this.codeInsertBox.Size = new System.Drawing.Size(372, 150);
-            this.codeInsertBox.TabIndex = 2;
-            this.codeInsertBox.Text = "";
             // 
             // label2
             // 
@@ -123,14 +115,6 @@
             this.uploadButton.UseVisualStyleBackColor = true;
             this.uploadButton.Click += new System.EventHandler(this.uploadButton_Click);
             // 
-            // solvedInsertBox
-            // 
-            this.solvedInsertBox.Location = new System.Drawing.Point(370, 358);
-            this.solvedInsertBox.Name = "solvedInsertBox";
-            this.solvedInsertBox.Size = new System.Drawing.Size(101, 41);
-            this.solvedInsertBox.TabIndex = 11;
-            this.solvedInsertBox.Text = "";
-            // 
             // label5
             // 
             this.label5.AutoSize = true;
@@ -140,21 +124,37 @@
             this.label5.TabIndex = 12;
             this.label5.Text = "Solved Yes/No";
             // 
+            // codeInsertBox
+            // 
+            this.codeInsertBox.Location = new System.Drawing.Point(182, 180);
+            this.codeInsertBox.Name = "codeInsertBox";
+            this.codeInsertBox.Size = new System.Drawing.Size(372, 162);
+            this.codeInsertBox.TabIndex = 13;
+            this.codeInsertBox.Text = "";
+            // 
+            // solvedInsertBox
+            // 
+            this.solvedInsertBox.Location = new System.Drawing.Point(370, 357);
+            this.solvedInsertBox.Name = "solvedInsertBox";
+            this.solvedInsertBox.Size = new System.Drawing.Size(103, 44);
+            this.solvedInsertBox.TabIndex = 14;
+            this.solvedInsertBox.Text = "";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.ClientSize = new System.Drawing.Size(684, 502);
-            this.Controls.Add(this.label5);
             this.Controls.Add(this.solvedInsertBox);
+            this.Controls.Add(this.codeInsertBox);
+            this.Controls.Add(this.label5);
             this.Controls.Add(this.uploadButton);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.descInsertBox);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.langInsertBox);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.codeInsertBox);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.nameInsertBox);
             this.Name = "Form1";
@@ -169,15 +169,15 @@
 
         private System.Windows.Forms.RichTextBox nameInsertBox;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.RichTextBox codeInsertBox;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.RichTextBox langInsertBox;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.RichTextBox descInsertBox;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button uploadButton;
-        private System.Windows.Forms.RichTextBox solvedInsertBox;
         private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.RichTextBox codeInsertBox;
+        private System.Windows.Forms.RichTextBox solvedInsertBox;
     }
 }
 

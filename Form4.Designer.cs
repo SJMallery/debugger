@@ -50,8 +50,8 @@
             this.codeUpdateBox = new System.Windows.Forms.RichTextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.nameUpdateBox = new System.Windows.Forms.RichTextBox();
-            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
-            this.idUpdateBox = new System.Windows.Forms.Label();
+            this.idUpdateBox = new System.Windows.Forms.RichTextBox();
+            this.idLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bugsBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.testDBDataSet)).BeginInit();
@@ -73,6 +73,7 @@
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(647, 174);
             this.dataGridView1.TabIndex = 0;
+            this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // idDataGridViewTextBoxColumn
@@ -134,6 +135,7 @@
             this.updateButton.TabIndex = 34;
             this.updateButton.Text = "Update";
             this.updateButton.UseVisualStyleBackColor = true;
+            this.updateButton.Click += new System.EventHandler(this.updateButton_Click);
             // 
             // label5
             // 
@@ -224,31 +226,31 @@
             this.nameUpdateBox.TabIndex = 24;
             this.nameUpdateBox.Text = "";
             // 
-            // richTextBox1
-            // 
-            this.richTextBox1.Location = new System.Drawing.Point(283, 274);
-            this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(181, 35);
-            this.richTextBox1.TabIndex = 35;
-            this.richTextBox1.Text = "";
-            // 
             // idUpdateBox
             // 
-            this.idUpdateBox.AutoSize = true;
-            this.idUpdateBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.idUpdateBox.Location = new System.Drawing.Point(258, 284);
+            this.idUpdateBox.Location = new System.Drawing.Point(283, 274);
             this.idUpdateBox.Name = "idUpdateBox";
-            this.idUpdateBox.Size = new System.Drawing.Size(19, 16);
-            this.idUpdateBox.TabIndex = 36;
-            this.idUpdateBox.Text = "Id";
+            this.idUpdateBox.Size = new System.Drawing.Size(181, 35);
+            this.idUpdateBox.TabIndex = 35;
+            this.idUpdateBox.Text = "";
+            // 
+            // idLabel
+            // 
+            this.idLabel.AutoSize = true;
+            this.idLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.idLabel.Location = new System.Drawing.Point(258, 284);
+            this.idLabel.Name = "idLabel";
+            this.idLabel.Size = new System.Drawing.Size(19, 16);
+            this.idLabel.TabIndex = 36;
+            this.idLabel.Text = "Id";
             // 
             // Form4
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(696, 673);
+            this.Controls.Add(this.idLabel);
             this.Controls.Add(this.idUpdateBox);
-            this.Controls.Add(this.richTextBox1);
             this.Controls.Add(this.updateButton);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.solvedUpdateBox);
@@ -295,7 +297,7 @@
         private System.Windows.Forms.RichTextBox codeUpdateBox;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.RichTextBox nameUpdateBox;
-        private System.Windows.Forms.RichTextBox richTextBox1;
-        private System.Windows.Forms.Label idUpdateBox;
+        private System.Windows.Forms.RichTextBox idUpdateBox;
+        private System.Windows.Forms.Label idLabel;
     }
 }
