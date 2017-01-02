@@ -45,13 +45,14 @@
             this.label4 = new System.Windows.Forms.Label();
             this.descUpdateBox = new System.Windows.Forms.RichTextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.langUpdateBox = new System.Windows.Forms.RichTextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.codeUpdateBox = new System.Windows.Forms.RichTextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.nameUpdateBox = new System.Windows.Forms.RichTextBox();
-            this.idUpdateBox = new System.Windows.Forms.RichTextBox();
             this.idLabel = new System.Windows.Forms.Label();
+            this.langUpdateBox = new System.Windows.Forms.RichTextBox();
+            this.idUpdateBox = new System.Windows.Forms.RichTextBox();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bugsBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.testDBDataSet)).BeginInit();
@@ -71,7 +72,7 @@
             this.dataGridView1.DataSource = this.bugsBindingSource;
             this.dataGridView1.Location = new System.Drawing.Point(27, 33);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(647, 174);
+            this.dataGridView1.Size = new System.Drawing.Size(647, 134);
             this.dataGridView1.TabIndex = 0;
             this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
@@ -176,19 +177,11 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(374, 234);
+            this.label3.Location = new System.Drawing.Point(381, 280);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(69, 16);
             this.label3.TabIndex = 29;
             this.label3.Text = "Language";
-            // 
-            // langUpdateBox
-            // 
-            this.langUpdateBox.Location = new System.Drawing.Point(449, 224);
-            this.langUpdateBox.Name = "langUpdateBox";
-            this.langUpdateBox.Size = new System.Drawing.Size(181, 35);
-            this.langUpdateBox.TabIndex = 28;
-            this.langUpdateBox.Text = "";
             // 
             // label2
             // 
@@ -212,7 +205,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(49, 234);
+            this.label1.Location = new System.Drawing.Point(56, 280);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(45, 16);
             this.label1.TabIndex = 25;
@@ -220,37 +213,55 @@
             // 
             // nameUpdateBox
             // 
-            this.nameUpdateBox.Location = new System.Drawing.Point(100, 224);
+            this.nameUpdateBox.Location = new System.Drawing.Point(107, 270);
             this.nameUpdateBox.Name = "nameUpdateBox";
             this.nameUpdateBox.Size = new System.Drawing.Size(181, 35);
             this.nameUpdateBox.TabIndex = 24;
             this.nameUpdateBox.Text = "";
             // 
-            // idUpdateBox
-            // 
-            this.idUpdateBox.Location = new System.Drawing.Point(283, 274);
-            this.idUpdateBox.Name = "idUpdateBox";
-            this.idUpdateBox.Size = new System.Drawing.Size(181, 35);
-            this.idUpdateBox.TabIndex = 35;
-            this.idUpdateBox.Text = "";
-            // 
             // idLabel
             // 
             this.idLabel.AutoSize = true;
             this.idLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.idLabel.Location = new System.Drawing.Point(258, 284);
+            this.idLabel.Location = new System.Drawing.Point(233, 227);
             this.idLabel.Name = "idLabel";
             this.idLabel.Size = new System.Drawing.Size(19, 16);
             this.idLabel.TabIndex = 36;
             this.idLabel.Text = "Id";
+            // 
+            // langUpdateBox
+            // 
+            this.langUpdateBox.Location = new System.Drawing.Point(456, 270);
+            this.langUpdateBox.Name = "langUpdateBox";
+            this.langUpdateBox.Size = new System.Drawing.Size(181, 35);
+            this.langUpdateBox.TabIndex = 28;
+            this.langUpdateBox.Text = "";
+            // 
+            // idUpdateBox
+            // 
+            this.idUpdateBox.Location = new System.Drawing.Point(258, 217);
+            this.idUpdateBox.Name = "idUpdateBox";
+            this.idUpdateBox.Size = new System.Drawing.Size(181, 35);
+            this.idUpdateBox.TabIndex = 37;
+            this.idUpdateBox.Text = "";
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(283, 190);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(121, 21);
+            this.comboBox1.TabIndex = 38;
+            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
             // Form4
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(696, 673);
-            this.Controls.Add(this.idLabel);
+            this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.idUpdateBox);
+            this.Controls.Add(this.idLabel);
             this.Controls.Add(this.updateButton);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.solvedUpdateBox);
@@ -292,12 +303,13 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.RichTextBox descUpdateBox;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.RichTextBox langUpdateBox;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.RichTextBox codeUpdateBox;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.RichTextBox nameUpdateBox;
-        private System.Windows.Forms.RichTextBox idUpdateBox;
         private System.Windows.Forms.Label idLabel;
+        private System.Windows.Forms.RichTextBox langUpdateBox;
+        private System.Windows.Forms.RichTextBox idUpdateBox;
+        private System.Windows.Forms.ComboBox comboBox1;
     }
 }
