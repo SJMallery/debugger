@@ -35,5 +35,12 @@ namespace debugger
             frm4.Show();
             this.Hide();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Form6 frm6 = new Form6();
+            frm6.Show();
+            this.Hide();
+        }
     }
 }

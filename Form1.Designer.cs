@@ -39,6 +39,7 @@
             this.label5 = new System.Windows.Forms.Label();
             this.codeInsertBox = new System.Windows.Forms.RichTextBox();
             this.solvedInsertBox = new System.Windows.Forms.RichTextBox();
+            this.button1 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // nameInsertBox
@@ -107,9 +108,9 @@
             // 
             // uploadButton
             // 
-            this.uploadButton.Location = new System.Drawing.Point(309, 430);
+            this.uploadButton.Location = new System.Drawing.Point(206, 429);
             this.uploadButton.Name = "uploadButton";
-            this.uploadButton.Size = new System.Drawing.Size(102, 41);
+            this.uploadButton.Size = new System.Drawing.Size(101, 45);
             this.uploadButton.TabIndex = 10;
             this.uploadButton.Text = "Upload";
             this.uploadButton.UseVisualStyleBackColor = true;
@@ -140,12 +141,23 @@
             this.solvedInsertBox.TabIndex = 14;
             this.solvedInsertBox.Text = "";
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(424, 429);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(101, 45);
+            this.button1.TabIndex = 15;
+            this.button1.Text = "Back";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.ClientSize = new System.Drawing.Size(684, 502);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.solvedInsertBox);
             this.Controls.Add(this.codeInsertBox);
             this.Controls.Add(this.label5);
@@ -178,6 +190,7 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.RichTextBox codeInsertBox;
         private System.Windows.Forms.RichTextBox solvedInsertBox;
+        private System.Windows.Forms.Button button1;
     }
 }
 

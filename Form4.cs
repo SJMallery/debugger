@@ -55,7 +55,7 @@ namespace debugger
 
                 nameUpdateBox.Text = nameValue;
                 langUpdateBox.Text = langValue;
-                idUpdateBox.Text = idValue;
+                //idUpdateBox.Text = idValue;
                 descUpdateBox.Text = descValue;
                 codeUpdateBox.Text = codeValue;
                 solvedUpdateBox.Text = solvedValue;
@@ -78,7 +78,7 @@ namespace debugger
             con.Open();
             SqlCommand cmd = con.CreateCommand();
             cmd.CommandType = CommandType.Text;
-            cmd.CommandText = "update bugs set code='"+ codeUpdateBox.Text +"', solved = '"+ solvedUpdateBox.Text+"'";
+            cmd.CommandText = "update bugs set code='"+ codeUpdateBox.Text +"', solved = '"+ solvedUpdateBox.Text+"' where name = '"+nameUpdateBox.Text+"'";
             cmd.ExecuteNonQuery();
             MessageBox.Show("Code has been updated");
             Form4 frm4 = new Form4();
@@ -133,6 +133,39 @@ namespace debugger
                 solvedUpdateBox.Text = dr["solved"].ToString();
 
             }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Form5 frm5 = new Form5();
+            frm5.Show();
+            this.Hide();
+        }
+
+        private void fillByToolStripButton_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                this.bugsTableAdapter.FillBy(this.testDBDataSet.bugs);
+            }
+            catch (System.Exception ex)
+            {
+                System.Windows.Forms.MessageBox.Show(ex.Message);
+            }
+
+        }
+
+        private void fillBy1ToolStripButton_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                this.bugsTableAdapter.FillBy1(this.testDBDataSet.bugs);
+            }
+            catch (System.Exception ex)
+            {
+                System.Windows.Forms.MessageBox.Show(ex.Message);
+            }
+
         }
     }
 }

@@ -29,13 +29,6 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.languageDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.descriptionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.codeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.solvedDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.bugsBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.testDBDataSet = new debugger.testDBDataSet();
             this.bugsTableAdapter = new debugger.testDBDataSetTableAdapters.bugsTableAdapter();
@@ -49,14 +42,168 @@
             this.codeUpdateBox = new System.Windows.Forms.RichTextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.nameUpdateBox = new System.Windows.Forms.RichTextBox();
-            this.idLabel = new System.Windows.Forms.Label();
             this.langUpdateBox = new System.Windows.Forms.RichTextBox();
-            this.idUpdateBox = new System.Windows.Forms.RichTextBox();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.button1 = new System.Windows.Forms.Button();
+            this.testDBDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.testDBDataSetBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.languageDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.descriptionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.codeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.solvedDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.bugsBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.testDBDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.testDBDataSetBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.testDBDataSetBindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
+            // 
+            // bugsBindingSource
+            // 
+            this.bugsBindingSource.DataMember = "bugs";
+            this.bugsBindingSource.DataSource = this.testDBDataSet;
+            // 
+            // testDBDataSet
+            // 
+            this.testDBDataSet.DataSetName = "testDBDataSet";
+            this.testDBDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // bugsTableAdapter
+            // 
+            this.bugsTableAdapter.ClearBeforeFill = true;
+            // 
+            // updateButton
+            // 
+            this.updateButton.Location = new System.Drawing.Point(205, 558);
+            this.updateButton.Name = "updateButton";
+            this.updateButton.Size = new System.Drawing.Size(83, 55);
+            this.updateButton.TabIndex = 34;
+            this.updateButton.Text = "Update";
+            this.updateButton.UseVisualStyleBackColor = true;
+            this.updateButton.Click += new System.EventHandler(this.updateButton_Click);
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(291, 523);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(80, 13);
+            this.label5.TabIndex = 33;
+            this.label5.Text = "Solved Yes/No";
+            // 
+            // solvedUpdateBox
+            // 
+            this.solvedUpdateBox.Location = new System.Drawing.Point(377, 509);
+            this.solvedUpdateBox.Name = "solvedUpdateBox";
+            this.solvedUpdateBox.Size = new System.Drawing.Size(101, 44);
+            this.solvedUpdateBox.TabIndex = 32;
+            this.solvedUpdateBox.Text = "";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(104, 307);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(76, 16);
+            this.label4.TabIndex = 31;
+            this.label4.Text = "Description";
+            // 
+            // descUpdateBox
+            // 
+            this.descUpdateBox.Location = new System.Drawing.Point(186, 292);
+            this.descUpdateBox.Name = "descUpdateBox";
+            this.descUpdateBox.Size = new System.Drawing.Size(372, 46);
+            this.descUpdateBox.TabIndex = 30;
+            this.descUpdateBox.Text = "";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(381, 250);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(69, 16);
+            this.label3.TabIndex = 29;
+            this.label3.Text = "Language";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(139, 418);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(41, 16);
+            this.label2.TabIndex = 27;
+            this.label2.Text = "Code";
+            // 
+            // codeUpdateBox
+            // 
+            this.codeUpdateBox.Location = new System.Drawing.Point(186, 350);
+            this.codeUpdateBox.Name = "codeUpdateBox";
+            this.codeUpdateBox.Size = new System.Drawing.Size(372, 153);
+            this.codeUpdateBox.TabIndex = 26;
+            this.codeUpdateBox.Text = "";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(56, 250);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(45, 16);
+            this.label1.TabIndex = 25;
+            this.label1.Text = "Name";
+            // 
+            // nameUpdateBox
+            // 
+            this.nameUpdateBox.Location = new System.Drawing.Point(107, 240);
+            this.nameUpdateBox.Name = "nameUpdateBox";
+            this.nameUpdateBox.Size = new System.Drawing.Size(181, 38);
+            this.nameUpdateBox.TabIndex = 24;
+            this.nameUpdateBox.Text = "";
+            // 
+            // langUpdateBox
+            // 
+            this.langUpdateBox.Location = new System.Drawing.Point(456, 240);
+            this.langUpdateBox.Name = "langUpdateBox";
+            this.langUpdateBox.Size = new System.Drawing.Size(181, 38);
+            this.langUpdateBox.TabIndex = 28;
+            this.langUpdateBox.Text = "";
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.ItemHeight = 24;
+            this.comboBox1.Location = new System.Drawing.Point(294, 182);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(156, 32);
+            this.comboBox1.TabIndex = 38;
+            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(456, 559);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(83, 55);
+            this.button1.TabIndex = 39;
+            this.button1.Text = "Back";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // testDBDataSetBindingSource
+            // 
+            this.testDBDataSetBindingSource.DataSource = this.testDBDataSet;
+            this.testDBDataSetBindingSource.Position = 0;
+            // 
+            // testDBDataSetBindingSource1
+            // 
+            this.testDBDataSetBindingSource1.DataSource = this.testDBDataSet;
+            this.testDBDataSetBindingSource1.Position = 0;
             // 
             // dataGridView1
             // 
@@ -70,12 +217,10 @@
             this.codeDataGridViewTextBoxColumn,
             this.solvedDataGridViewTextBoxColumn});
             this.dataGridView1.DataSource = this.bugsBindingSource;
-            this.dataGridView1.Location = new System.Drawing.Point(27, 33);
+            this.dataGridView1.Location = new System.Drawing.Point(26, 13);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(647, 134);
-            this.dataGridView1.TabIndex = 0;
-            this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
-            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            this.dataGridView1.Size = new System.Drawing.Size(649, 146);
+            this.dataGridView1.TabIndex = 40;
             // 
             // idDataGridViewTextBoxColumn
             // 
@@ -114,154 +259,14 @@
             this.solvedDataGridViewTextBoxColumn.HeaderText = "solved";
             this.solvedDataGridViewTextBoxColumn.Name = "solvedDataGridViewTextBoxColumn";
             // 
-            // bugsBindingSource
-            // 
-            this.bugsBindingSource.DataMember = "bugs";
-            this.bugsBindingSource.DataSource = this.testDBDataSet;
-            // 
-            // testDBDataSet
-            // 
-            this.testDBDataSet.DataSetName = "testDBDataSet";
-            this.testDBDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // bugsTableAdapter
-            // 
-            this.bugsTableAdapter.ClearBeforeFill = true;
-            // 
-            // updateButton
-            // 
-            this.updateButton.Location = new System.Drawing.Point(321, 586);
-            this.updateButton.Name = "updateButton";
-            this.updateButton.Size = new System.Drawing.Size(83, 55);
-            this.updateButton.TabIndex = 34;
-            this.updateButton.Text = "Update";
-            this.updateButton.UseVisualStyleBackColor = true;
-            this.updateButton.Click += new System.EventHandler(this.updateButton_Click);
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(291, 553);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(80, 13);
-            this.label5.TabIndex = 33;
-            this.label5.Text = "Solved Yes/No";
-            // 
-            // solvedUpdateBox
-            // 
-            this.solvedUpdateBox.Location = new System.Drawing.Point(377, 539);
-            this.solvedUpdateBox.Name = "solvedUpdateBox";
-            this.solvedUpdateBox.Size = new System.Drawing.Size(101, 41);
-            this.solvedUpdateBox.TabIndex = 32;
-            this.solvedUpdateBox.Text = "";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(104, 337);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(76, 16);
-            this.label4.TabIndex = 31;
-            this.label4.Text = "Description";
-            // 
-            // descUpdateBox
-            // 
-            this.descUpdateBox.Location = new System.Drawing.Point(186, 322);
-            this.descUpdateBox.Name = "descUpdateBox";
-            this.descUpdateBox.Size = new System.Drawing.Size(372, 43);
-            this.descUpdateBox.TabIndex = 30;
-            this.descUpdateBox.Text = "";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(381, 280);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(69, 16);
-            this.label3.TabIndex = 29;
-            this.label3.Text = "Language";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(139, 448);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(41, 16);
-            this.label2.TabIndex = 27;
-            this.label2.Text = "Code";
-            // 
-            // codeUpdateBox
-            // 
-            this.codeUpdateBox.Location = new System.Drawing.Point(186, 380);
-            this.codeUpdateBox.Name = "codeUpdateBox";
-            this.codeUpdateBox.Size = new System.Drawing.Size(372, 150);
-            this.codeUpdateBox.TabIndex = 26;
-            this.codeUpdateBox.Text = "";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(56, 280);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(45, 16);
-            this.label1.TabIndex = 25;
-            this.label1.Text = "Name";
-            // 
-            // nameUpdateBox
-            // 
-            this.nameUpdateBox.Location = new System.Drawing.Point(107, 270);
-            this.nameUpdateBox.Name = "nameUpdateBox";
-            this.nameUpdateBox.Size = new System.Drawing.Size(181, 35);
-            this.nameUpdateBox.TabIndex = 24;
-            this.nameUpdateBox.Text = "";
-            // 
-            // idLabel
-            // 
-            this.idLabel.AutoSize = true;
-            this.idLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.idLabel.Location = new System.Drawing.Point(233, 227);
-            this.idLabel.Name = "idLabel";
-            this.idLabel.Size = new System.Drawing.Size(19, 16);
-            this.idLabel.TabIndex = 36;
-            this.idLabel.Text = "Id";
-            // 
-            // langUpdateBox
-            // 
-            this.langUpdateBox.Location = new System.Drawing.Point(456, 270);
-            this.langUpdateBox.Name = "langUpdateBox";
-            this.langUpdateBox.Size = new System.Drawing.Size(181, 35);
-            this.langUpdateBox.TabIndex = 28;
-            this.langUpdateBox.Text = "";
-            // 
-            // idUpdateBox
-            // 
-            this.idUpdateBox.Location = new System.Drawing.Point(258, 217);
-            this.idUpdateBox.Name = "idUpdateBox";
-            this.idUpdateBox.Size = new System.Drawing.Size(181, 35);
-            this.idUpdateBox.TabIndex = 37;
-            this.idUpdateBox.Text = "";
-            // 
-            // comboBox1
-            // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(283, 190);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 21);
-            this.comboBox1.TabIndex = 38;
-            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
-            // 
             // Form4
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(696, 673);
+            this.ClientSize = new System.Drawing.Size(697, 634);
+            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.comboBox1);
-            this.Controls.Add(this.idUpdateBox);
-            this.Controls.Add(this.idLabel);
             this.Controls.Add(this.updateButton);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.solvedUpdateBox);
@@ -273,30 +278,23 @@
             this.Controls.Add(this.codeUpdateBox);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.nameUpdateBox);
-            this.Controls.Add(this.dataGridView1);
             this.Name = "Form4";
             this.Text = "Form4";
             this.Load += new System.EventHandler(this.Form4_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bugsBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.testDBDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.testDBDataSetBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.testDBDataSetBindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.DataGridView dataGridView1;
         private testDBDataSet testDBDataSet;
         private System.Windows.Forms.BindingSource bugsBindingSource;
         private testDBDataSetTableAdapters.bugsTableAdapter bugsTableAdapter;
-        private System.Windows.Forms.DataGridViewTextBoxColumn idDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn nameDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn languageDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn descriptionDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn codeDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn solvedDataGridViewTextBoxColumn;
         private System.Windows.Forms.Button updateButton;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.RichTextBox solvedUpdateBox;
@@ -307,9 +305,17 @@
         private System.Windows.Forms.RichTextBox codeUpdateBox;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.RichTextBox nameUpdateBox;
-        private System.Windows.Forms.Label idLabel;
         private System.Windows.Forms.RichTextBox langUpdateBox;
-        private System.Windows.Forms.RichTextBox idUpdateBox;
         private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.BindingSource testDBDataSetBindingSource;
+        private System.Windows.Forms.BindingSource testDBDataSetBindingSource1;
+        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nameDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn languageDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn descriptionDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn codeDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn solvedDataGridViewTextBoxColumn;
     }
 }
