@@ -54,6 +54,7 @@
             this.descriptionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.codeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.solvedDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.helpButton = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.bugsBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.testDBDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.testDBDataSetBindingSource)).BeginInit();
@@ -259,11 +260,22 @@
             this.solvedDataGridViewTextBoxColumn.HeaderText = "solved";
             this.solvedDataGridViewTextBoxColumn.Name = "solvedDataGridViewTextBoxColumn";
             // 
+            // helpButton
+            // 
+            this.helpButton.Location = new System.Drawing.Point(121, 182);
+            this.helpButton.Name = "helpButton";
+            this.helpButton.Size = new System.Drawing.Size(75, 23);
+            this.helpButton.TabIndex = 41;
+            this.helpButton.Text = "Help!";
+            this.helpButton.UseVisualStyleBackColor = true;
+            this.helpButton.Click += new System.EventHandler(this.helpButton_Click);
+            // 
             // Form4
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(697, 634);
+            this.Controls.Add(this.helpButton);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.comboBox1);
@@ -317,5 +329,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn descriptionDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn codeDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn solvedDataGridViewTextBoxColumn;
+        private System.Windows.Forms.Button helpButton;
     }
 }

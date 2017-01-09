@@ -167,6 +167,11 @@ namespace debugger
             }
 
         }
+
+        private void helpButton_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Use the above window to see available bugs and use dropdown box to select the desired one. Click upadate once finished or cancel to return.");
+        }
     }
 }
     

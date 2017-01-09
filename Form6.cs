@@ -119,5 +119,10 @@ namespace debugger
             frm5.Show();
             this.Hide();
         }
+
+        private void helpButton_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Use the above window to see available bugs and use dropdown box to select the desired one. Click delete once finished or cancel to return.");
+        }
     }
 }

@@ -52,6 +52,7 @@
             this.bugsTableAdapter = new debugger.testDBDataSetTableAdapters.bugsTableAdapter();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.backButton = new System.Windows.Forms.Button();
+            this.helpButton = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bugsBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.testDBDataSet)).BeginInit();
@@ -245,11 +246,22 @@
             this.backButton.UseVisualStyleBackColor = true;
             this.backButton.Click += new System.EventHandler(this.backButton_Click);
             // 
+            // helpButton
+            // 
+            this.helpButton.Location = new System.Drawing.Point(128, 161);
+            this.helpButton.Name = "helpButton";
+            this.helpButton.Size = new System.Drawing.Size(75, 23);
+            this.helpButton.TabIndex = 27;
+            this.helpButton.Text = "Help!";
+            this.helpButton.UseVisualStyleBackColor = true;
+            this.helpButton.Click += new System.EventHandler(this.helpButton_Click);
+            // 
             // Form6
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(691, 609);
+            this.Controls.Add(this.helpButton);
             this.Controls.Add(this.backButton);
             this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.dataGridView1);
@@ -300,5 +312,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn solvedDataGridViewTextBoxColumn;
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.Button backButton;
+        private System.Windows.Forms.Button helpButton;
     }
 }
